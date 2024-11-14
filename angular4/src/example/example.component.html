@@ -1,0 +1,18 @@
+<div class="data-container">
+    <h2>Fetched Data</h2>
+  
+    <!-- Display error message if there's any -->
+    <p *ngIf="errorMessage" style="color: red">{{ errorMessage }}</p>
+  
+    <!-- Loop through the data array and display each item -->
+    <ul>
+      <li *ngFor="let item of data">
+        <!-- Display your data items, assuming the JSON has 'name' and 'age' fields -->
+        Name: {{ item.name }}, Age: {{ item.age }}
+      </li>
+    </ul>
+  
+    <!-- If no data exists, display a message -->
+    <p *ngIf="data.length === 0">No data available.</p>
+  </div>
+  
